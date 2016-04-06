@@ -1,0 +1,7 @@
+*.lua
+logs/
+nginx.conf.compiled
+.tup
+
+# basic authentication
+.htpasswd
