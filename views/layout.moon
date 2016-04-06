@@ -1,6 +1,6 @@
 import Widget from require "lapis.html"
 
-class Index extends Widget
+class Layout extends Widget
 	content: =>
 		html_5 ->
 	    	head ->

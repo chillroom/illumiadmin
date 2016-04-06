@@ -1,6 +1,6 @@
 import Widget from require "lapis.html"
 
-class Index extends Widget
+class Home extends Widget
 	content: =>
 		div class: "ui text container", ->
 			h1 class: "ui dividing header", "IllumiBot"
