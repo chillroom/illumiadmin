@@ -7,10 +7,18 @@ class extends lapis.Application
 	[home: "/app"]: =>
 		render: true
 
-	[api_restart: "/app/restart"]: capture_errors respond_to {
+	[api_restart: "/app/api_restart"]: capture_errors respond_to {
 		on_error: => json: success: false
 		POST: =>
-			success = os.execute "export HOME=/home/qaisjp/; pm2 restart illumi"
+			success = os.execute "export HOME=/home/qaisjp/; pm2 restart illumiapi"
+			assert_error success == 0
+			json: success: true
+	}
+
+	[bot_restart: "/app/bot_restart"]: capture_errors respond_to {
+		on_error: => json: success: false
+		POST: =>
+			success = os.execute "export HOME=/home/qaisjp/; pm2 restart illumibot"
 			assert_error success == 0
 			json: success: true
 	}

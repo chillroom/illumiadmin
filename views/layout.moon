@@ -4,11 +4,11 @@ class Layout extends Widget
 	content: =>
 		html_5 ->
 	    	head ->
-	    		title "IllumiBot"
+	    		title "Just a chill room"
 	    		link rel: "stylesheet", type: "text/css", href: "/app/static/semantic.min.css"
 	    		style -> raw [[
-	    			.container {
-	    				padding: 5em 0em;
+	    			body > .ui.container {
+	    				margin-top: 3em;
 	    			}
 	    		]]
 
