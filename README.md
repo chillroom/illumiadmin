@@ -2,7 +2,7 @@
 
 This dashboard allows you to restart the bot without needing to contact qais.
 
-Visit [api.just-a-chill-room.net/app](http://api.just-a-chill-room.net/app) and log in
+Visit [admin.just-a-chill-room.net](http://admin.just-a-chill-room.net) and log in
 using the details given to you.
 
 Software used: (incomplete list)
