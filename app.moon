@@ -4,10 +4,10 @@ import render_html from require "lapis.html"
 
 class extends lapis.Application
 	layout: require "views.layout"
-	[home: "/app"]: =>
+	[home: "/"]: =>
 		render: true
 
-	[api_restart: "/app/api_restart"]: capture_errors respond_to {
+	[api_restart: "/api_restart"]: capture_errors respond_to {
 		on_error: => json: success: false
 		POST: =>
 			success = os.execute "export HOME=/home/qaisjp/; pm2 restart illumiapi"
@@ -15,7 +15,7 @@ class extends lapis.Application
 			json: success: true
 	}
 
-	[bot_restart: "/app/bot_restart"]: capture_errors respond_to {
+	[bot_restart: "/bot_restart"]: capture_errors respond_to {
 		on_error: => json: success: false
 		POST: =>
 			success = os.execute "export HOME=/home/qaisjp/; pm2 restart illumibot"
