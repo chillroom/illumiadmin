@@ -17,6 +17,12 @@ class Home extends Widget
 				i class: "refresh icon"
 				text "Restart"
 
+		section class: "ui text container", ->
+			h3 class: "first", "Other"
+			p ->
+				text "ID getter bookmarklet (drag to bookmarks bar, press whilst inside dubtrack)"
+				a class: "ui primary button", href:[[javascript:var person = prompt("Enter username to get ID"); $.getJSON("https://api.dubtrack.fm/user/"+person, (data) => { return prompt("ID for "+person+ " looks like",data.data._id) })]], "Drag me!"
+
 		@content_for "script_post", ->
 			script type: "text/javascript", -> raw [[
 				successTest = function(response) { return response.success || false; }
