@@ -1,3 +1,6 @@
+# This project has been abandoned.
+
+
 # IllumiBot web dashboard
 
 This dashboard allows you to restart the bot without needing to contact qais.
